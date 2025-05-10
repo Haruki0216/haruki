@@ -1,18 +1,28 @@
-let btn = document.querySelector('button');
-let elem = document.querySelector('p');
+let btn1 = document.getElementById('startButton1');
+let btn2 = document.getElementById('startButton2');
+let elem = document.getElementById('output');
 let mes = 100;
-
-btn.addEventListener('click',() => {
+// 条件Aの時の処理
+function processA() {
+    elem.innerText += "Aがクリックされました！→ ";
+    mes += 150;
     elem.innerText += mes;
+}
+// 条件Bの時の処理
+function processB() {
 
-    for(i=0 ; i<10 ; i+=1 ){
-        mes += 150;
-        elem.innerText += " → " + mes;
+    elem.innerText += "Bがクリックされました！→ ";
+
+    for (let i = 0; i < 10; i++) {
+
+        mes += i + 1;
+
+        elem.innerText += "→ " + mes;
+
     }
-    /*
-    while(mes<10000){
-        mes += 150;
-        elem.innerText += " → " + mes;
-    }
-    */       
-});
+
+}
+// イベントリスナーを設定
+btn1.addEventListener('click', processA);
+btn2.addEventListener('click', processB);
+ 
