@@ -1,26 +1,26 @@
-let btn1 = document.getElementById('startButton1');
-let btn2 = document.getElementById('startButton2');
+let btnFor = document.getElementById('startButtonFor');
+let btnWhile = document.getElementById('startButtonWhile');
 let elem = document.getElementById('output');
-let mes = 100;
-
-// 条件Aの時の処理
-function processA() {
-    elem.innerText += "Aがクリックされました！→ ";
-    for (let i = 0; i < 5; i++) { // 例として5回繰り返す
-        mes += 100;
-        elem.innerText += "→ " + mes;
-    }
+let mesFor = 100;
+let mesWhile = 100;
+// forループの処理
+function processFor() {
+   elem.innerText = "forループ開始！→ " + mesFor; // 初期値を出力
+   for (let i = 0; i < 10; i++) {
+       mesFor += 150;
+       elem.innerText += "→ " + mesFor;
+   }
+   elem.innerText += "→ forループ終了！";
 }
-
-// 条件Bの時の処理
-function processB() {
-    elem.innerText += "Bがクリックされました！→ ";
-    for (let i = 0; i < 10; i++) {
-        mes += i + 1;
-        elem.innerText += "→ " + mes;
-    }
+// whileループの処理
+function processWhile() {
+   elem.innerText = "whileループ開始！→ " + mesWhile; // 初期値を出力
+   while (mesWhile < 10000) {
+       mesWhile += 150;
+       elem.innerText += "→ " + mesWhile;
+   }
+   elem.innerText += "→ whileループ終了！";
 }
-
 // イベントリスナーを設定
-btn1.addEventListener('click', processA);
-btn2.addEventListener('click', processB);
+btnFor.addEventListener('click', processFor);
+btnWhile.addEventListener('click', processWhile);
