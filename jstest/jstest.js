@@ -1,4 +1,4 @@
-const teams = ['A', 'B', 'C', 'D', 'E'];
+const teams = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
 const table = document.getElementById('matchTable');
 // ヘッダー作成
 let headerRow = '<tr><th></th>';
