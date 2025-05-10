@@ -4,25 +4,18 @@ let elem = document.getElementById('output');
 let mes = 100;
 // 条件Aの時の処理
 function processA() {
-    elem.innerText += "Aがクリックされました！→ ";
-    mes += 150;
-    elem.innerText += mes;
+   elem.innerText += "Aがクリックされました！→ ";
+   mes += 150;
+   elem.innerText += mes;
 }
 // 条件Bの時の処理
 function processB() {
-
-    elem.innerText += "Bがクリックされました！→ ";
-
-    for (let i = 0; i < 10; i++) {
-
-        mes += i + 1;
-
-        elem.innerText += "→ " + mes;
-
-    }
-
+   elem.innerText += "Bがクリックされました！→ ";
+   for (let i = 0; i < 10; i++) {
+       mes += i + 1;
+       elem.innerText += "→ " + mes;
+   }
 }
 // イベントリスナーを設定
 btn1.addEventListener('click', processA);
 btn2.addEventListener('click', processB);
- 
